@@ -175,6 +175,7 @@ description: ''
     خود در سایت [codecov.io](https://codecov.io)
     وارد شوید. سپس به آدرس `https://codecov.io/gh/Star-Academy/<your-repository-name>`
     بروید.
+    سپس مراحل ذکر شده در این صفحه را به ترتیب اجرا کنید. پس از آن از وضعیت code coverage خود یک خروجی با فرمت xml بگیرید(اگر از rider استفاده می کنید تب code coverage را باز کره و از قسمت بالا Export Covrerage report و سپس Export to Detailed Xml را انتخاب کرده و آدرس مورد نظر برای استخراج فایل را مشخص کنید.
 
     1. بخش زیر را به فایل `buildPipeline.yml`
       اضافه کنید:
@@ -184,7 +185,7 @@ description: ''
           uses: codecov/codecov-action@v1
           with:
               token: ${{ secrets.CODECOV_TOKEN }}
-              files: ./**/coverage.cobertura.xml
+              files: <coverage report file address that you specified in the previous part>
               fail_ci_if_error: true
         ```
 
